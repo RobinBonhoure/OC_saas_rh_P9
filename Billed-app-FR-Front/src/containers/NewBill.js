@@ -21,7 +21,7 @@ export default class NewBill {
     const fileType = file.type;
     if(!fileType.includes('image/')) {
       this.document.querySelector(`input[data-testid="file"]`).value = '';
-      this.document.querySelector(`input[data-testid="file"]`).files[0] = '';
+      alert('file must be image format (jpeg/png)');
       return;
     }
     const filePath = e.target.value.split(/\\/g)
